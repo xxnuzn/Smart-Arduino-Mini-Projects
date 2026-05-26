@@ -1,0 +1,17 @@
+int button = 7;
+int buzzer = 8;
+
+void setup() {
+  pinMode(button, INPUT);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  int state = digitalRead(button);
+
+  if(state == HIGH) {
+    tone(buzzer, 1000);
+  } else {
+    noTone(buzzer);
+  }
+}
